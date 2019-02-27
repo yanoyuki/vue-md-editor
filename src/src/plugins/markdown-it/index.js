@@ -14,7 +14,7 @@ const markdown = require('markdown-it')(markdown_config)
 // plugins
 const mark = require('markdown-it-mark')
 const container = require('markdown-it-container')
-// markdown-it-ins
+const ins = require('markdown-it-ins')
 
 // plugins for markdown-it-container
 import { youtube, embed } from './container'
@@ -25,6 +25,7 @@ markdown
   .use(container)
   .use(container, 'youtube', youtube)
   .use(container, 'embed', embed)
+  .use(ins)
 
 
 // override default renderer
