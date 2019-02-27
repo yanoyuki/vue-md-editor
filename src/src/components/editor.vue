@@ -17,6 +17,7 @@ import md from '@/plugins/markdown-it'
 import samleMd from '@/assets/sample'
 import {
   insertTextAtCaret,
+  insertTextAtRowFirst,
 } from '@/plugins/extra-functions'
 
 export default {
@@ -35,15 +36,18 @@ export default {
       this.input = e.target.value
     }, 300),
 
-    insert ({prefix, subfix, str}) {
+    insertTextAtCaret ({prefix, subfix, str}) {
       insertTextAtCaret(this.$refs.textarea, {prefix, subfix, str}, this)
     },
 
+    insertTextAtRowFirst({prefix, str})  {
+      insertTextAtRowFirst(this.$refs.textarea, {prefix, str}, this)
+    },
+
     insertTab () {
-      this.insert({
+      this.insertTextAtRowFirst({
         prefix: 'hoge',
-        subfix: 'foo',
-        str: 'select'
+        str: 'select',
       })
     }
   },
