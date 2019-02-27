@@ -1,4 +1,4 @@
-export default (obj, {prefix, subfix, str, type}, $vm) => {
+export default (obj, {prefix, subfix, str}, $vm) => {
   const startPos = obj.selectionStart
   const endPos = obj.selectionEnd
   const tmpStr = obj.value

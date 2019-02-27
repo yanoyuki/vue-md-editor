@@ -35,8 +35,8 @@ export default {
       this.input = e.target.value
     }, 300),
 
-    insert ({prefix, subfix, str, type}) {
-      insertTextAtCaret(this.$refs.textarea, {prefix, subfix, str, type}, this)
+    insert ({prefix, subfix, str}) {
+      insertTextAtCaret(this.$refs.textarea, {prefix, subfix, str}, this)
     },
 
     insertTab () {
