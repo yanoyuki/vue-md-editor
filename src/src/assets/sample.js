@@ -1,6 +1,6 @@
 export default `# sample doc
 
-hogehoge
+normal paragraph
 
 ==mark==
 
@@ -8,7 +8,7 @@ hogehoge
 
 ++underline++
 
-image
+![cat](http://d30uxjjrk95rd.cloudfront.net/img/pages/pet_cat/cat_img_81.jpg)
 
 > quotes
 > multi line
