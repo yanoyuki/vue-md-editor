@@ -12,8 +12,8 @@ const markdown_config = {
 const markdown = require('markdown-it')(markdown_config)
 
 // plugins
-const mark = require('markdown-it-mark')
-const ins = require('markdown-it-ins')
+import mark from 'markdown-it-mark'
+import ins from 'markdown-it-ins'
 import { a, blockEmbed } from './plugin'
 
 // use plugins
