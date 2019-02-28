@@ -24,9 +24,13 @@ normal paragraph
 
 ### heading3
 
+[link](https://example.com)
+
 @[youtube](https://www.youtube.com/watch?v=0YF8vecQWYs&list=RD0YF8vecQWYs&start_radio=1)
 
-[link](https://example.com)
+@[youtube](nBteO-bU78Y)
+
+要するに、youtubeは"?v=###########"のidを取得できれば大丈夫というコードです（多少URLが変でも反応しちゃうけど、それはまあ目をつぶって。この方が、URLのコピペでいろんなオプションがついても色々対応できるから）
 
 link (embed)
 
