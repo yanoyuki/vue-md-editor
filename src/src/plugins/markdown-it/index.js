@@ -14,12 +14,13 @@ const markdown = require('markdown-it')(markdown_config)
 // plugins
 const mark = require('markdown-it-mark')
 const ins = require('markdown-it-ins')
-import { a } from './plugin'
+import { a, blockEmbed } from './plugin'
 
 // use plugins
 markdown
   .use(mark)
   .use(ins)
   .use(a)
+  .use(blockEmbed)
 
 export default markdown

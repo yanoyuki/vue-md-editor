@@ -24,9 +24,7 @@ normal paragraph
 
 ### heading3
 
-:::youtube
-http://youtube.com
-:::
+@[youtube](https://www.youtube.com/watch?v=0YF8vecQWYs&list=RD0YF8vecQWYs&start_radio=1)
 
 [link](https://example.com)
 
