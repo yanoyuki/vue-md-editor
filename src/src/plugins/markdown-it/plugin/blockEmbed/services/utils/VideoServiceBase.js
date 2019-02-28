@@ -30,17 +30,10 @@ export default class {
     return filterUrlDelegate(videoUrl, this.name, videoID, this.env.options)
   }
 
-  getEmbedCode(videoID) {
-    let containerClassNames = []
-    if (this.env.options.containerClassName) {
-      containerClassNames.push(this.env.options.containerClassName)
-    }
+  getEmbedCode(reference) {
+    const videoID = this.extractVideoID(reference)
 
-    let escapedServiceName = this.env.md.utils.escapeHtml(this.name)
-    containerClassNames.push(
-      this.env.options.serviceClassPrefix + escapedServiceName
-    )
-
+    // iframe options
     let iframeAttributeList = []
     iframeAttributeList.push(['type', 'text/html'])
     iframeAttributeList.push(['src', this.getFilteredVideoUrl(videoID)])
@@ -66,9 +59,7 @@ export default class {
       .join(' ')
 
     return (
-      `<div class="${containerClassNames.join(' ')}">` +
-      `<iframe ${iframeAttributes}></iframe>` +
-      `</div>\n`
+      `<iframe ${iframeAttributes}></iframe>`
     )
   }
 }

@@ -59,7 +59,7 @@ export default function (state, startLine, endLine, silent) {
   if (SYNTAX_CODES[3] !== state.src.charCodeAt(pointer.pos++)) return false
   if (!advanceToSymbol(state, endLine, ')', pointer)) return false
 
-  let videoReference = state.src
+  let reference = state.src
     .substr(pointer.prevPos, pointer.pos - pointer.prevPos)
     .trim()
 
@@ -81,14 +81,13 @@ export default function (state, startLine, endLine, silent) {
   if (pointer.line >= endLine) return false
 
   if (!silent) {
-    let token = state.push('video', 'div', 0)
+    let token = state.push('embed', 'div', 0)
     token.markup = state.src.slice(startPos, pointer.pos)
     token.block = true
     token.info = {
       serviceName: serviceName,
       service: service,
-      videoReference: videoReference,
-      videoID: service.extractVideoID(videoReference),
+      reference: reference,
     }
     token.map = [startLine, pointer.line + 1]
 
