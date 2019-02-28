@@ -6,26 +6,19 @@ const markdown_config = {
   langPrefix: 'lang-',  // CSS language prefix for fenced blocks.
   linkify: false,        // Autoconvert URL-like text to links
   typographer: true,
-  quotes: '“”‘’'
+  quotes: '“”‘’',
 }
 
 const markdown = require('markdown-it')(markdown_config)
 
 // plugins
 const mark = require('markdown-it-mark')
-const container = require('markdown-it-container')
 const ins = require('markdown-it-ins')
 import { a } from './plugin'
-
-// plugins for markdown-it-container
-import { youtube, embed } from './container'
 
 // use plugins
 markdown
   .use(mark)
-  .use(container)
-  .use(container, 'youtube', youtube)
-  .use(container, 'embed', embed)
   .use(ins)
   .use(a)
 
