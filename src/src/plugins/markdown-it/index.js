@@ -14,7 +14,7 @@ const markdown = require('markdown-it')(markdown_config)
 // plugins
 import mark from 'markdown-it-mark'
 import ins from 'markdown-it-ins'
-import { a, blockEmbed } from './plugin'
+import { a, blockEmbed, colorify } from './plugin'
 
 // use plugins
 markdown
@@ -22,5 +22,6 @@ markdown
   .use(ins)
   .use(a)
   .use(blockEmbed)
+  .use(colorify)
 
 export default markdown

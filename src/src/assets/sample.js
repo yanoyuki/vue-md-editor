@@ -34,5 +34,7 @@ normal paragraph
 
 link (embed)
 
-colorify
+*{1}colorify-1*
+
+*{2}colorify-2*
 `
